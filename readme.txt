@@ -3,7 +3,7 @@ Contributors: juliobox, secupress
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJGT942XKWJ6W
 Tags: user, member, password, security
 Requires at least: 3.0
-Tested up to: 3.9
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,6 +23,11 @@ Force your new users to change their first password when they log in!
 1. No settings page
 
 == Changelog ==
+
+= 1.1 =
+* 11 aug 2015
+* 4.3 support
+* FR l10n
 
 = 1.0 =
 * 30 apr 2014

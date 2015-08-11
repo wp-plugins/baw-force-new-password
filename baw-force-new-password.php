@@ -3,11 +3,16 @@
 Plugin Name: Baw Force New Password
 Description: Force new users to change their password on their first login.
 Plugin URI: http://blog.secupress.fr/nouvel-utilisateur-nouveau-mot-de-passe-186.html
-Version: 1.0
+Version: 1.1
 Author: Julio Potier
-Author URI: http://boiteaweb.fr
+Author URI: http://wp-rocket.me
 License: GPL v2 or later
 */
+
+add_action( 'init', 'bawfnp_l10n_init' );
+function bawfnp_l10n_init() {
+	load_plugin_textdomain( 'bawfnp', '', dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+}
 
 add_action( 'init', 'bawfnp_redirect' );
 function bawfnp_redirect() {
@@ -38,7 +43,7 @@ function bawfnp_notices() {
 	if ( get_user_meta( $GLOBALS['current_user']->ID, 'force-new-password', true ) ) {
 		printf(
 			'<div class="error"><p>%s %s</p></div>',
-			__( 'You&rsquo;re using the auto-generated password for your account. Would you like to change it to something easier to remember?' ),
+			__( 'You&rsquo;re using the auto-generated password for your account. Please change it now.', 'bawfnp' ),
 			__( '(required)' )
 			);
 	}
